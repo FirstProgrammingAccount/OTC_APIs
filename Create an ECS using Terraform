@@ -1,0 +1,33 @@
+substitute the corresponding information to username, password, project name (eg: eu-de), domain name, region name (eg: eu-de), ecs name, flavor name (eg: s2.large.2), image id, 
+vpc id, availability zone (eg: eu-de-1), network id (you can find the network id in VPC details)
+
+
+
+terraform {
+  required_providers {
+    opentelekomcloud = {
+      source = "opentelekomcloud/opentelekomcloud"
+      version = "1.22.6"
+    }
+  }
+}
+
+provider "opentelekomcloud" {
+  user_name = "username"
+  password = "password"
+  tenant_name = "project name"
+  domain_name = "domain name"
+  region = "region name"
+  auth_url = "https://iam.eu-de.otc.t-systems.com/v3"
+}
+
+resource "opentelekomcloud_ecs_instance_v1" "basic" {
+  name = "ecs name"
+  flavor = "flavor name"
+  image_id = "image id"
+  vpc_id = "vpc id"
+  availability_zone = "availability zone"
+  nics {
+    network_id = "network id"
+  }
+}
