@@ -1,3 +1,3 @@
-# required varibales: iam_endpoint, token, description, user_id
+# required varibales: iam_endpoint, token, description, user_id <-- need to be tested
 
-curl -i -k -H "X-Auth-Token:$token" -H "Content-Type:application/json;charset=utf8" -X POST https://$iam_endpoint/v3.0/OS-CREDENTIAL/credentials -d '{"credential":{"description":"IAMDescription","user_id":"aa31c6f5a9b246d7a459f37172e3030a"}}'
+curl -i -k -H "X-Auth-Token:$token" -H "Content-Type:application/json;charset=utf8" -X POST https://$iam_endpoint/v3.0/OS-CREDENTIAL/credentials -d '{"credential":{"description":"'$description'","user_id":"'$user_id'"}}'
