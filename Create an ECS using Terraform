@@ -1,5 +1,7 @@
-substitute the corresponding information to username, password, project name (eg: eu-de), domain name, region name (eg: eu-de), ecs name, flavor name (eg: s2.large.2), image id, 
-vpc id, availability zone (eg: eu-de-1), network id (you can find the network id in VPC details)
+#copy the content of this file into <your_file_name>.tf 
+#substitute the corresponding information to username, password, project name (eg: eu-de), domain name, region name (eg: eu-de), ecs name, flavor name (eg: s2.large.2), image id, 
+#vpc id, availability zone (eg: eu-de-1), network id (you can find the network id in VPC details)
+#then run terraform init, then run terraform apply
 
 
 
