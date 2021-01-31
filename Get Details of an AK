@@ -1,3 +1,3 @@
 #variables: token, access_key  <--- to be tested
 
-curl -i -k -H 'X-Auth-Token:$token' -H 'Content-Type:application/json;charset=utf8' -X GET https://$iam_endpoint/v3.0/OS-CREDENTIAL/credentials/$access_key
+curl -i -k -H "X-Auth-Token:$token" -H 'Content-Type:application/json;charset=utf8' -X GET https://$iam_endpoint/v3.0/OS-CREDENTIAL/credentials/$access_key
